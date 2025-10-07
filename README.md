@@ -1,7 +1,6 @@
 # my-go-project
 Lessons for learning Golang
 
-
 # Запуск
 ```
 go run main.go
