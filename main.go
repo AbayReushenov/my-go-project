@@ -2,20 +2,9 @@ package main
 
 import "fmt"
 
-func split(sum int) (x, y int) {
-	x = sum * 4 / 9
-	y = sum - x
-	return
-}
+var c, python, java bool
 
 func main() {
-	fmt.Println(split(17)) // 7 10
+	var i int
+	fmt.Println(i, c, python, java) // 0 false false false
 }
-//  Ключевые моменты, которые стоит усвоить:
-
-// Именованные возвращаемые значения и возможность return без аргументов.
-
-// Целочисленное деление в Go всегда отбрасывает дробную часть.
-
-// Функции в Go могут возвращать несколько значений без использования структур или массивов.
-
