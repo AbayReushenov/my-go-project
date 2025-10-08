@@ -8,5 +8,5 @@ import (
 func main() {
 	fmt.Println(math.Pi)
 }
-// # command-line-arguments
-// ./main.go:9:19: undefined: math.pi
+// aaaaa@aaaaa-GF63-Thin-9SCXR:~/my-go-project$ go run main.go
+// 3.141592653589793
