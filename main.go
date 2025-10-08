@@ -2,12 +2,14 @@ package main
 
 import "fmt"
 
-func add(x, y int) int {
-	return x + y
+func swap(x, y string) (string, string) {
+	return y, x
 }
 
 func main() {
-	fmt.Println(add(42, 13))
+	a, b := swap("hello", "world")
+	fmt.Println(a, b)
+    fmt.Println(swap("Привет", "Мир"))
 }
 // aaaaa@aaaaa-GF63-Thin-9SCXR:~/my-go-project$ go run main.go
-// 55
+// world hello
