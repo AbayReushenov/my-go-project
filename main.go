@@ -1,27 +1,28 @@
 package main
 
-import (
-	"fmt"
-	"math"
-)
+import "fmt"
 
 func main() {
-	var x, y int = 3, 4
-	var f float64 = math.Sqrt(float64(x*x + y*y)) +.01
-	var z uint = uint(f)
-	fmt.Println(x, y, z, f)  // 3 4 5 5.01
+    var i int
+    j := i // j is an int
+    fmt.Printf("i is of type %T\n", i)
+    fmt.Printf("j is of type %T\n", j)
+
+    ii := 42           // int
+    f := 3.142        // float64
+    g := 0.867 + 0.5i // complex128
+
+    fmt.Printf("ii is of type %T\n", ii)
+    fmt.Printf("f is of type %T\n", f)
+    fmt.Printf("g is of type %T\n", g)
+
+	v := 42 // change me!
+	fmt.Printf("v is of type %T\n", v)
 }
 
-// Type conversions
-// The expression T(v) converts the value v to the type T.
-
-// Some numeric conversions:
-
-// var i int = 42
-// var f float64 = float64(i)
-// var u uint = uint(f)
-// Or, put more simply:
-
-// i := 42
-// f := float64(i)
-// u := uint(f)
+// i is of type int
+// j is of type int
+// ii is of type int
+// f is of type float64
+// g is of type complex128
+// v is of type int
