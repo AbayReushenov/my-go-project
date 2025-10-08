@@ -2,14 +2,20 @@ package main
 
 import "fmt"
 
-func swap(x, y string) (string, string) {
-	return y, x
+func split(sum int) (x, y int) {
+	x = sum * 4 / 9
+	y = sum - x
+	return
 }
 
 func main() {
-	a, b := swap("hello", "world")
-	fmt.Println(a, b)
-    fmt.Println(swap("Привет", "Мир"))
+	fmt.Println(split(17)) // 7 10
 }
-// aaaaa@aaaaa-GF63-Thin-9SCXR:~/my-go-project$ go run main.go
-// world hello
+//  Ключевые моменты, которые стоит усвоить:
+
+// Именованные возвращаемые значения и возможность return без аргументов.
+
+// Целочисленное деление в Go всегда отбрасывает дробную часть.
+
+// Функции в Go могут возвращать несколько значений без использования структур или массивов.
+
