@@ -1,12 +1,13 @@
 package main
 
-import (
-	"fmt"
-	"math"
-)
+import "fmt"
+
+func add(x int, y int) int {
+	return x + y
+}
 
 func main() {
-	fmt.Println(math.Pi)
+	fmt.Println(add(42, 13))
 }
 // aaaaa@aaaaa-GF63-Thin-9SCXR:~/my-go-project$ go run main.go
-// 3.141592653589793
+// 55
