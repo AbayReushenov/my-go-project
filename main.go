@@ -1,21 +1,27 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 func main() {
-	var i int
-	var f float64
-	var b bool
-	var s string
-	fmt.Printf("%v %v %v %q\n", i, f, b, s)
+	var x, y int = 3, 4
+	var f float64 = math.Sqrt(float64(x*x + y*y)) +.01
+	var z uint = uint(f)
+	fmt.Println(x, y, z, f)  // 3 4 5 5.01
 }
-// 0 0 false ""
 
+// Type conversions
+// The expression T(v) converts the value v to the type T.
 
-// Variables declared without an explicit initial value are given their zero value.
+// Some numeric conversions:
 
-// The zero value is:
+// var i int = 42
+// var f float64 = float64(i)
+// var u uint = uint(f)
+// Or, put more simply:
 
-// 0 for numeric types,
-// false for the boolean type, and
-// "" (the empty string) for strings.
+// i := 42
+// f := float64(i)
+// u := uint(f)
