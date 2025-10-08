@@ -1,23 +1,35 @@
-// Константы
-// Константы объявляются как переменные, но с ключевым словом const.
+// Числовые константы
+// Числовые константы — это значения высокой точности.
 
-// Константы могут иметь символьные, строковые, логические или числовые значения.
+// Нетипизированная константа принимает тип, соответствующий контексту.
 
-// Константы нельзя объявлять с использованием синтаксиса :=.
+// Попробуйте также вывести needInt(Big).
+
+// (В int может храниться максимум 64-битное целое число, а иногда и меньше.
 package main
 
 import "fmt"
 
-const Pi = 3.14
+const (
+	// Создаём огромное число, сдвигая единичный бит влево на 100 позиций.
+	// Другими словами, это двоичное число, состоящее из 1 и 100 нулей.
+
+	Big = 1 << 100
+	// Shift it right again 99 places, so we end up with 1<<1, or 2.
+	// Сдвигаем его ещё раз вправо на 99 позиций, в результате получаем 1 << 1 или 2.
+	Small = Big >> 99
+)
+
+func needInt(x int) int { return x*10 + 1 }
+func needFloat(x float64) float64 {
+	return x * 0.1
+}
 
 func main() {
-	const World = "世界"
-	fmt.Println("Hello", World)
-	fmt.Println("Happy", Pi, "Day")
-
-	const Truth = true
-	fmt.Println("Go rules?", Truth)
+	fmt.Println(needInt(Small))
+	fmt.Println(needFloat(Small))
+	fmt.Println(needFloat(Big))
 }
-// Hello 世界
-// Happy 3.14 Day
-// Go rules? true
+// 21
+// 0.2
+// 1.2676506002282295e+29
