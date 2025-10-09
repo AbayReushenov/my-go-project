@@ -9,11 +9,7 @@ type Vertex struct {
 
 func main() {
 	v := Vertex{1, 2}
-	v.X = 4
-	fmt.Println(v.X)
-	fmt.Println(v)
-	fmt.Println(v.Y)
+	p := &v
+	p.X = 1e9
+	fmt.Println(v)  // {1000000000 2}
 }
-// 4
-// {4 2}
-// 2
