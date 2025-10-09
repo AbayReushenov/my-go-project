@@ -3,29 +3,36 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("counting")
+	i, j := 42, 2701
 
-	for i := 0; i < 10; i++ {
-		defer fmt.Println(i)
-	}
+	p := &i         // point to i
+	fmt.Println(*p) // read i through the pointer
+	// 42
+	*p = 21         // set i through the pointer
+	fmt.Println(i)  // see the new value of i
+	// 21
 
-	fmt.Println("done")
+	p = &j         // point to j
+	*p = *p / 37   // divide j through the pointer
+	fmt.Println(j) // see the new value of j
+	// 73
 }
 
 
-// aaaaa@aaaaa-GF63-Thin-9SCXR:~/my-go-project$ go run main.go
-// counting
-// done
-// 9
-// 8
-// 7
-// 6
-// 5
-// 4
-// 3
-// 2
-// 1
-// 0
+// Указатели
+// В Go есть указатели. Указатель хранит адрес памяти значения.
 
-// Стекирование отложенных вызовов
-// Отложенные вызовы функций помещаются в стек. При возврате из функции её отложенные вызовы выполняются в порядке «последним вошёл — первым вышел».
+// Тип *T — это указатель на значение T. Его нулевое значение — nil.
+
+// var p *int
+// Оператор & генерирует указатель на свой операнд.
+
+// i := 42
+// p = &i
+// Оператор * обозначает базовое значение указателя.
+
+// fmt.Println(*p) // прочитать i по указателю p
+// *p = 21 // установить i по указателю p
+// Это называется «разыменованием» или «косвенным обращением».
+
+// В отличие от C, в Go нет арифметики указателей.
