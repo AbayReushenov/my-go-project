@@ -3,22 +3,29 @@ package main
 import "fmt"
 
 func main() {
-	defer fmt.Println("world")
+	fmt.Println("counting")
 
-	fmt.Println("hello")
+	for i := 0; i < 10; i++ {
+		defer fmt.Println(i)
+	}
+
+	fmt.Println("done")
 }
 
-// hello
-// world
 
-//
-// Defer
-// A defer statement defers the execution of a function until the surrounding function returns.
+// aaaaa@aaaaa-GF63-Thin-9SCXR:~/my-go-project$ go run main.go
+// counting
+// done
+// 9
+// 8
+// 7
+// 6
+// 5
+// 4
+// 3
+// 2
+// 1
+// 0
 
-// The deferred call's arguments are evaluated immediately, but the function call is not executed until the surrounding function returns.
-// Defer
-// Оператор defer откладывает выполнение функции до тех пор, пока окружающая функция не вернёт управление.
-
-// Аргументы отложенного вызова вычисляются немедленно, но вызов функции не выполняется до тех пор, пока окружающая функция не вернёт управление.
-
-
+// Стекирование отложенных вызовов
+// Отложенные вызовы функций помещаются в стек. При возврате из функции её отложенные вызовы выполняются в порядке «последним вошёл — первым вышел».
