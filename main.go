@@ -25,6 +25,6 @@ func main() {
 	board[0][2] = "X"
 
 	for i := 0; i < len(board); i++ {
-		fmt.Printf("%s\n", strings.Join(board[i], " "))
+		fmt.Printf("%s\n", strings.Join(board[i], "  "))
 	}
 }
