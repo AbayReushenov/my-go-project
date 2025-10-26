@@ -2,24 +2,37 @@ package main
 
 import "fmt"
 
-const (
-	// Create a huge number by shifting a 1 bit left 100 places.
-	// In other words, the binary number that is 1 followed by 100 zeroes.
-	Big = 1 << 100
-	// Shift it right again 99 places, so we end up with 1<<1, or 2.
-	Small = Big >> 99
-)
-
-func needInt(x int) int { return x*10 + 1 }
-func needFloat(x float64) float64 {
-	return x * 0.1
-}
-
 func main() {
-	fmt.Println(needInt(Small))
-	fmt.Println(needFloat(Small))
-	fmt.Println(needFloat(Big))
+	var y = 100
+
+	for i := 1; i < 25; i++ {
+		fmt.Println("Текущий индекс ", i, "y =", y)
+		y = y + 89
+	}
 }
-// 21
-// 0.2
-// 1.2676506002282295e+29
+
+// aaaaa@aaaaa-GF63-Thin-9SCXR:~/my-go-project$ go run main.go
+// Текущий индекс  1 y = 100
+// Текущий индекс  2 y = 189
+// Текущий индекс  3 y = 278
+// Текущий индекс  4 y = 367
+// Текущий индекс  5 y = 456
+// Текущий индекс  6 y = 545
+// Текущий индекс  7 y = 634
+// Текущий индекс  8 y = 723
+// Текущий индекс  9 y = 812
+// Текущий индекс  10 y = 901
+// Текущий индекс  11 y = 990
+// Текущий индекс  12 y = 1079
+// Текущий индекс  13 y = 1168
+// Текущий индекс  14 y = 1257
+// Текущий индекс  15 y = 1346
+// Текущий индекс  16 y = 1435
+// Текущий индекс  17 y = 1524
+// Текущий индекс  18 y = 1613
+// Текущий индекс  19 y = 1702
+// Текущий индекс  20 y = 1791
+// Текущий индекс  21 y = 1880
+// Текущий индекс  22 y = 1969
+// Текущий индекс  23 y = 2058
+// Текущий индекс  24 y = 2147
