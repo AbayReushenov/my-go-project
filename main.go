@@ -1,5 +1,7 @@
 package main
 
+// NEXT ===>>>
+// https://go.dev/tour/methods/2
 import (
 	"fmt"
 )
