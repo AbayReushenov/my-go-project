@@ -1,17 +1,19 @@
 package main
 
-import (
-	"fmt"
-	"os"
-)
+import "fmt"
+
+const Pi = 3.14
 
 func main() {
-	var s, sep string
+	const World = "世界"
+	fmt.Println("Hello", World)
+	fmt.Println("Happy", Pi, "Day")
 
-	for i := 1; i < len(os.Args); i++ {
-		s += sep + os.Args[i]
-		sep = " "
-	}
-
-	fmt.Println(s, os.Args)
+	const Truth = true
+	fmt.Println("Go rules?", Truth)
 }
+
+// aaaaa@aaaaa-GF63-Thin-9SCXR:~/my-go-project$ go run main.go
+// Hello 世界
+// Happy 3.14 Day
+// Go rules? true
